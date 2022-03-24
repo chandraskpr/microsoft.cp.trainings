@@ -1,0 +1,32 @@
+﻿@model EProductPortal.Models.ProductCollectionViewModel
+@{
+    ViewData["Title"] = "AllProducts";
+}
+
+<h1>AllProducts</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">NAME</th>
+            <th scope="col">QUANTITY</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Rows)
+        {
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Quantity</td>
+            <td>@product.Price</td>
+            <td>
+                @Html.ActionLink("Edit", "EditProduct", "Product", routeValues: new { name = @product.Name})
+                @Html.ActionLink("Delete", "DeleteProduct", "Product", routeValues: new { name = @product.Name })
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>

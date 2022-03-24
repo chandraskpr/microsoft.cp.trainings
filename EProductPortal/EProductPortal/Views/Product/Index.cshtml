@@ -1,0 +1,14 @@
+﻿
+@{
+    
+}
+
+@if (ViewBag.IsEditMode == true)
+{
+    @Html.Partial("_EditProduct", @ViewData["Product"])
+}
+
+@if (ViewBag.IsEditMode == false)
+{
+    @Html.Partial("_CreateProduct")
+}

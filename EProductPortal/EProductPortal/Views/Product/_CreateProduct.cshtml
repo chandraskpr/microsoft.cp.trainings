@@ -1,0 +1,40 @@
+﻿@model EProductPortal.Models.CreateProductViewModel
+@using (Html.BeginForm("CreateNewProduct", "Product", FormMethod.Post))
+{
+    <div class="row">
+        <div class="form-group">
+            @Html.DisplayNameFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            @Html.DisplayNameFor(m => m.Price)
+            @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            @Html.DisplayNameFor(m => m.Quantity)
+            @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            @Html.DisplayNameFor(m => m.IsAvaliableOnline)
+            @Html.RadioButtonFor(m => m.IsAvaliableOnline, true) Yes
+            @Html.RadioButtonFor(m => m.IsAvaliableOnline, false) No
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            @Html.DisplayNameFor(m => m.AvaliableStores)
+            @Html.TextBoxFor(m => m.AvaliableStores, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <input type="submit" class="btn-primary" value="Create" />
+    <input type="button" class="btn-primary" value="Cancel" />
+}
