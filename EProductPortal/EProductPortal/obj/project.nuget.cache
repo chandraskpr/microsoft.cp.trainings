@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NXFR8DVN/czaqlF/IQFBsnC1rQ7/5Z6kyadg1CiSMSmDTmSTRnThAiTOrN1EIPVdwgRGYTRHHfaShoO+yXaulg==",
+  "dgSpecHash": "lDdYL2asm6kit0lB/uCfXyQnMvAHDEZUKmQGjMcn09vcAecZE/RBnwYo09BjgeItlTdCODRifwN8OViPDk1D2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ChandraSekharKumarPa\\source\\repos\\EProductPortal\\EProductPortal\\EProductPortal.csproj",
+  "projectFilePath": "C:\\CPT\\microsoft.cp.trainings\\EProductPortal\\EProductPortal\\EProductPortal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ChandraSekharKumarPa\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ChandraSekharKumarPa\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

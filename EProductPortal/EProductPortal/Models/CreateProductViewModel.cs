@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace EProductPortal.Models
 {
     public class CreateProductViewModel
-    {
+    {        
+        public int Id { get; set; }
+
         [Display(Name = "Product Name")]
         public string Name { get; set; }
         public int Price { get; set; }

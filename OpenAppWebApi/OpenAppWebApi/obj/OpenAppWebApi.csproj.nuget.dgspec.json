@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ChandraSekharKumarPa\\source\\repos\\OpenAppWebApi\\OpenAppWebApi\\OpenAppWebApi.csproj": {}
+    "C:\\CPT\\microsoft.cp.trainings\\OpenAppWebApi\\OpenAppWebApi\\OpenAppWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ChandraSekharKumarPa\\source\\repos\\OpenAppWebApi\\OpenAppWebApi\\OpenAppWebApi.csproj": {
+    "C:\\CPT\\microsoft.cp.trainings\\OpenAppWebApi\\OpenAppWebApi\\OpenAppWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ChandraSekharKumarPa\\source\\repos\\OpenAppWebApi\\OpenAppWebApi\\OpenAppWebApi.csproj",
+        "projectUniqueName": "C:\\CPT\\microsoft.cp.trainings\\OpenAppWebApi\\OpenAppWebApi\\OpenAppWebApi.csproj",
         "projectName": "OpenAppWebApi",
-        "projectPath": "C:\\Users\\ChandraSekharKumarPa\\source\\repos\\OpenAppWebApi\\OpenAppWebApi\\OpenAppWebApi.csproj",
+        "projectPath": "C:\\CPT\\microsoft.cp.trainings\\OpenAppWebApi\\OpenAppWebApi\\OpenAppWebApi.csproj",
         "packagesPath": "C:\\Users\\ChandraSekharKumarPa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ChandraSekharKumarPa\\source\\repos\\OpenAppWebApi\\OpenAppWebApi\\obj\\",
+        "outputPath": "C:\\CPT\\microsoft.cp.trainings\\OpenAppWebApi\\OpenAppWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ChandraSekharKumarPa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,7 +40,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.15, )"
             }
           },
           "imports": [

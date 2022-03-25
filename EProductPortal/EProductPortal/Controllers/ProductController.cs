@@ -40,11 +40,12 @@ namespace EProductPortal.Controllers
         {
             ProductDomainModel domainModel = new ProductDomainModel()
             {
+                Id = product.Id,
                 Name = product.Name,
                 Price = product.Price,
                 Quantity = product.Quantity,
                 AvaliableStores = product.AvaliableStores,
-                IsAvaliableOnline = product.IsAvaliableOnline
+                IsAvaliable = product.IsAvaliableOnline
             };
 
             bool isCallSuccessfull = CallPostApiAsync<ProductDomainModel>(domainModel).Result;
@@ -65,11 +66,12 @@ namespace EProductPortal.Controllers
         {
             ProductDomainModel domainModel = new ProductDomainModel()
             {
+                Id = product.Id,
                 Name = product.Name,
                 Price = product.Price,
                 Quantity = product.Quantity,
                 AvaliableStores = product.AvaliableStores,
-                IsAvaliableOnline = product.IsAvaliableOnline
+                IsAvaliable = product.IsAvaliableOnline
             };
 
             bool isCallSuccessfull = CallPutApiAsync<ProductDomainModel>(domainModel, "/" + product.Name).Result;

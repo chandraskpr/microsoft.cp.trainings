@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using OpenAppWebApi.DataObjects.interfaces;
+using OpenAppWebApi.EBusinessDb;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,50 +15,61 @@ namespace OpenAppWebApi.Controllers
     public class ProductsController : ControllerBase
     {
         private IDbOperations productOperations;
-        public ProductsController(IDbOperations _productOperations)
+        private EBusinessPortalContext portalDbContext;
+        public ProductsController(
+            IDbOperations _productOperations,
+            EBusinessPortalContext _portalDbContext)
         {
             this.productOperations = _productOperations;
-            //this.productOperations.Insert(new ProductData() { Name = "Milk", Quantity = 200 });
-            //this.productOperations.Insert(new ProductData() { Name = "Oranges", Quantity = 300 });
-            //this.productOperations.Insert(new ProductData() { Name = "Grapes", Quantity = 150 });
+            this.portalDbContext = _portalDbContext;
 
         }
 
         // GET: api/<ValuesController>
         [HttpGet]
-        public IEnumerable<ProductData> Get()
+        public IEnumerable<Product> Get()
         {
-            return this.productOperations.GetAll();
+            return this.portalDbContext.Products.AsEnumerable();
+            //this.productOperations.GetAll();
         }
 
         // GET api/<ValuesController>/5
         [HttpGet("{name}")]
-        public ProductData Get(string name)
+        public Product Get(string name)
         {
-            return this.productOperations.GetAll().FirstOrDefault(x => x.Name == name); 
+            return this.portalDbContext.Products.FirstOrDefault(x => x.Name == name);
+            //this.productOperations.GetAll().FirstOrDefault(x => x.Name == name); 
         }
 
         // POST api/<ValuesController>
         [HttpPost]
-        public void Post([FromBody] ProductData value)
+        public void Post([FromBody] Product value)
         {
-            this.productOperations.Insert(value);
+            this.portalDbContext.Products.Add(value);
+            this.portalDbContext.SaveChanges();
+            //this.productOperations.Insert(value);
         }
 
         // PUT api/<ValuesController>/5
         [HttpPut("{id}")]
-        public void Put(string name, [FromBody] ProductData value)
+        public void Put(string name, [FromBody] Product value)
         {
-            this.productOperations.Update(value);
+            this.portalDbContext.Products.Update(value);
+            this.portalDbContext.SaveChanges();
+            //this.productOperations.Update(value);
         }
 
         // DELETE api/<ValuesController>/5
         [HttpDelete("{name}")]
         public void Delete(string name)
         {
-            var product = this.productOperations.GetAll().FirstOrDefault(x => x.Name == name);
+            //var product = this.productOperations.GetAll().FirstOrDefault(x => x.Name == name);
+            //this.productOperations.Delete(product);
 
-            this.productOperations.Delete(product);
+            var producttoDelete = this.portalDbContext.Products.FirstOrDefault(x => x.Name == name);
+            this.portalDbContext.Products.Remove(producttoDelete);
+            this.portalDbContext.SaveChanges();
+
         }
     }
 }

@@ -7,9 +7,10 @@ namespace EProductPortal.Domain
 {
     public class ProductDomainModel
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
-        public bool IsAvaliableOnline { get; set; }
+        public bool IsAvaliable { get; set; }
         public string AvaliableStores { get; set; }
         public int Quantity { get; set; }
     }

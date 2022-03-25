@@ -6072,11 +6072,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ChandraSekharKumarPa\\source\\repos\\EProductPortal\\EProductPortal\\EProductPortal.csproj",
+      "projectUniqueName": "C:\\CPT\\microsoft.cp.trainings\\EProductPortal\\EProductPortal\\EProductPortal.csproj",
       "projectName": "EProductPortal",
-      "projectPath": "C:\\Users\\ChandraSekharKumarPa\\source\\repos\\EProductPortal\\EProductPortal\\EProductPortal.csproj",
+      "projectPath": "C:\\CPT\\microsoft.cp.trainings\\EProductPortal\\EProductPortal\\EProductPortal.csproj",
       "packagesPath": "C:\\Users\\ChandraSekharKumarPa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ChandraSekharKumarPa\\source\\repos\\EProductPortal\\EProductPortal\\obj\\",
+      "outputPath": "C:\\CPT\\microsoft.cp.trainings\\EProductPortal\\EProductPortal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ChandraSekharKumarPa\\AppData\\Roaming\\NuGet\\NuGet.Config",
